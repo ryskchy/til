@@ -1,5 +1,5 @@
 ## dllを別フォルダにまとめる
-* app.config内、`<probing privatePath="lib" />`と足すとlib内に入る
+* app.config内、`<probing privatePath="lib" />`と足すとlib内に入れても読み取られる
 
 ```
 <runtime>
