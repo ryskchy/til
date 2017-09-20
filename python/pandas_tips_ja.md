@@ -7,3 +7,7 @@ series.to_frame().apply(lambda x:x.name, 1)
 
 ## SeriesからDataFrameへの変換
 * `Series.to_frame()` 関数がある
+
+## concat
+* `pd.concat(a, b)` で列結合(超基本だと思うが地味に使ってなかった)
+* インデックスとかも合わせてくれるっぽいので要検証

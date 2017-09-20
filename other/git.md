@@ -5,3 +5,7 @@
 
 ## remoteブランチの削除
 * ローカルブランチを消してから `git push origin :branchname`
+
+## ブランチのrename
+* `git branch -m <old> <new>`
+* かれんとなら `git branch -n <new>`でいい
