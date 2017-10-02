@@ -15,3 +15,19 @@
 ## 数字フォーマット
 * `"{:02d}".format(1)`で`"01"`
 * 何回調べても忘れる(C#も)
+
+## setの扱いについて
+* `a.intersection(b)`でも`set.intersection(a,b)`いける
+* `set.union(a,b,c,d,...)`ができる
+    * `set.union(*[1,2,3,4])`もok
+* `set.isdisjoint`がintersectionが無いかどうか
+* `a.difference(b)`は $$\forall x \in a and x \not\in b$$
+
+|演算子|関数|意味|
+|--:|:--|:--|
+|`s <= t`|`s.issubset(t)`|sの要素すべてがtにあればTrue|
+|`s >= t`|`s.isuperset(t)`|tの要素すべてがsにあればTrue||
+|`s | t`|`s.union(t)`|和集合|
+|`s & t`|`s.intersection(t)`|共通部分|
+|`s - t`|`s.difference(t)`|sのようそのうちtに含まれないもの|
+|`s ^ t`|`s.union(t)`|どちらか一方にだけあるもの|
