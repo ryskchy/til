@@ -31,3 +31,28 @@
 |`s & t`|`s.intersection(t)`|共通部分|
 |`s - t`|`s.difference(t)`|sのようそのうちtに含まれないもの|
 |`s ^ t`|`s.union(t)`|どちらか一方にだけあるもの|
+
+## ディレクトリのコピー、削除
+* ディレクトリの再帰的コピー 
+```
+import distutils.dir_util
+distutils.dir_util.copy_tree("source_path", "dit_path")
+```
+* ディレクトリの削除（中身がある）
+```
+shutil.rmtree("hoge")
+```
+
+## ファイルを再帰的に探索
+```
+def find_all_files(directory):
+    for root, dirs, files in os.walk(directory):
+        yield root
+        for file in files:
+            yield os.path.join(root, file)
+
+for file in find_all_files('/tmp/test'):
+    print file
+```
+* `__pychache__`を再帰的に削除
+
