@@ -8,3 +8,9 @@
 </assemblyBinding>
 </runtime>
 ```
+
+## デスクトップアプリ上のブラウザコントロール
+* WPFの`System.Windows.Controls.WebBrowser` はデフォルトではIE7互換
+    * IE11互換にするには(実行側で?)レジストリ書き換えが必要
+* フォームのwebコントロールもおそらく同じ
+* CefSharpというのを使うとChromiumが埋め込めるかも？
