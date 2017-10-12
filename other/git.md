@@ -8,4 +8,4 @@
 
 ## ブランチのrename
 * `git branch -m <old> <new>`
-* かれんとなら `git branch -n <new>`でいい
+* カレントなら `git branch -n <new>`でいい
