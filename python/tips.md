@@ -29,7 +29,7 @@
 |`s >= t`|`s.isuperset(t)`|tの要素すべてがsにあればTrue||
 |`s | t`|`s.union(t)`|和集合|
 |`s & t`|`s.intersection(t)`|共通部分|
-|`s - t`|`s.difference(t)`|sのようそのうちtに含まれないもの|
+|`s - t`|`s.difference(t)`|sの要素のうちtに含まれないもの|
 |`s ^ t`|`s.union(t)`|どちらか一方にだけあるもの|
 
 ## ディレクトリのコピー、削除
