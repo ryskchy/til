@@ -1,6 +1,8 @@
 ## ボタンの形を変える
 * ボタンのTempleteプロパティで色々書ける
-* Te,pleteBindingバインディング拡張で、テンプレート適用先のプロパティ値を参照できる
+* TempleteBindingバインディング拡張で、テンプレート適用先のプロパティ値を参照できる
+* ContentPresenterをつけないともとのContentが反映されない
+    * TargetTypeをつけていないときも反映されない
 
 ## GroupBoxのヘッダをラジオボタンに
 * 普通に
