@@ -54,5 +54,8 @@ def find_all_files(directory):
 for file in find_all_files('/tmp/test'):
     print file
 ```
-* `__pychache__`を再帰的に削除
+
+## SimpleHTTPServer on python3
+* `pyhon -m http.server [ポート番号]`
+
 
