@@ -28,3 +28,16 @@
 ## Mahapps.MetroのRangeSlider
 * Minimum, Maximumは選択できる範囲、選択している小さい側はLowerValue, 大きい方はUpperValue
 * MinimumRangeがUpperとLowerの差
+
+## Window in Window
+* XamlでGridなどの子要素としてWindowは入れられない
+* ドラッグではみ出してもいいなら
+```
+var child = new ChildWindow()
+child.Owner = this //ユーザーコントロールから呼ぶ場合はWindow.GetWindow(this)
+child.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+```
+で相対位置が親ウインドウの真ん中に表示される
+* UserControlにすれば子要素にできる
+    * IsVisibleChangedにイベントハンドラを足して閉じたときの処理を書く
+* Windowを継承しても、幾つかのメンバを変更すれば子要素にできるようだが未検証 (20171026)
