@@ -59,3 +59,6 @@ for file in find_all_files('/tmp/test'):
 * `pyhon -m http.server [ポート番号]`
 
 
+## dataset.freeze
+* dbのデータをcsvやjsonで出力するメソッド
+* datafreeze という独立したモジュールになった(201709くらい？)
