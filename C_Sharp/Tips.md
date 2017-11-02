@@ -41,3 +41,14 @@ else (
 echo "not Release"
 )
 ```
+
+## ??演算子
+* `Hoge a = hoge?? new Hoge();`
+* `Hoge a = hoge == null ? new Hoge() : hoge;` と同等
+
+## Nullabe構造体のValueプロパティ
+* `(bool?)`などのnull許容型にある.Valueプロパティは、.HasValueがtrueの時 (=null以外のものが入っている時)はnull非許容の値を返すが、nullのときは例外になるので安全ではない
+
+## Nullable boolのif分岐(WPFのDialogResult等)
+* StackOverflowでは `if(value == true)`が人気。個人的にはかなり違和感がある
+* 他に `if(value.HasValue && value.Value)`, `if(value ?? false)`など

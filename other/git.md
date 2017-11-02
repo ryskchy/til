@@ -9,3 +9,7 @@
 ## ブランチのrename
 * `git branch -m <old> <new>`
 * カレントなら `git branch -n <new>`でいい
+
+## [github]プルリクエストのマージの際のsquash
+* Confirm meregeのボタンの横からsquashができる
+    * コミットをまとめる

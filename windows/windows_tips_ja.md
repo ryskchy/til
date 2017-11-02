@@ -19,4 +19,8 @@
 * `reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t REG_DWORD /d "0" /f`
 
 ## どのポートでどのアプリケーションが使われているか調べる
+* `netstat -nao`
 
+## VPN接続をコマンド上で管理する
+* powershellに `Add-VPNConnection`, `Set-VPNConnection`がある
+* ユーザ名、パスワードの変更はできない
