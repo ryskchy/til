@@ -41,3 +41,16 @@ child.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 * UserControlにすれば子要素にできる
     * IsVisibleChangedにイベントハンドラを足して閉じたときの処理を書く
 * Windowを継承しても、幾つかのメンバを変更すれば子要素にできるようだが未検証 (20171026)
+
+## [XAML]MarginとPadding
+* marginはコントロールの外側、他コントロールとの余白
+* paddingはコントロールの内側、コンテンツとの余白
+* cssとだいたい同じ
+
+## [XAML] XAML内で文字列の書式指定
+* `<TextBlock Text="{Binding hoge, StringFormat=Format{0}hoge}">`
+* ただしバインディングする対象が先頭の場合は
+    * `<TextBlock Text="{Binding hoge, StringFormat={}{0}hoge}">`
+    とする必要がある
+## 日付の書式
+* "d" でToShortDateStringと同じ"{0:d}"
