@@ -52,3 +52,18 @@ echo "not Release"
 ## Nullable boolのif分岐(WPFのDialogResult等)
 * StackOverflowでは `if(value == true)`が人気。個人的にはかなり違和感がある
 * 他に `if(value.HasValue && value.Value)`, `if(value ?? false)`など
+
+## static readonlyとconstの違い
+* constはコンパイル時に決まる
+    * 恒久的に変わらないもの
+    * コンパイル時に変換される
+* static readonlyのほうができることが多い
+    * string以外の参照型も使える
+    * コンストラクタ宣言時に代入できるので、その時の動的な値を使える
+    * 実行時変数なのでほんの少しだけ遅い
+
+# 浮動小数点数の等値比較
+* 原則として、`==`, `!=` は使わない
+    * 環境によっては警告が出る
+* 参照型のRefereenceEqual的な意味合いなら使えなくもない？
+    * 計算を経由しない場合（例えば初期値から変化がないかどうかを確認する場合など）は使ってもいいのか不明（あまり見栄えが良くないので別の方法を使ったほうがいいと思われる）

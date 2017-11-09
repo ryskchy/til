@@ -52,5 +52,9 @@ child.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 * ただしバインディングする対象が先頭の場合は
     * `<TextBlock Text="{Binding hoge, StringFormat={}{0}hoge}">`
     とする必要がある
+
 ## 日付の書式
 * "d" でToShortDateStringと同じ"{0:d}"
+
+## SaveFileDialog
+* `Microsoft.Win32.SaveFileDialog` を使うときに`SaveFileDialog.Initial`
