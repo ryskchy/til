@@ -13,3 +13,8 @@
 ## [github]プルリクエストのマージの際のsquash
 * Confirm meregeのボタンの横からsquashができる
     * コミットをまとめる
+
+## リモート側の変更(ブランチの削除など)がローカルに反映されないときの対応
+* `git remote show origin` でリモートとの対応関係が表示される
+    * 動悸されているものはtracked, リモートで消えているものはstale
+* `git remote purune origin` で一気に消せる
