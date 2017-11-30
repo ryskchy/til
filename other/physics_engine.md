@@ -7,3 +7,6 @@
 
 * Unityの場合はチュートリアルに案内がある
     * https://unity3d.com/jp/learn/tutorials/topics/physics/physics-best-practices
+
+# 座標
+* 物理エンジンは座標の中心が中心、WPFの描画エンジンは矩形の左上
