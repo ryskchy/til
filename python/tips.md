@@ -58,7 +58,29 @@ for file in find_all_files('/tmp/test'):
 ## SimpleHTTPServer on python3
 * `pyhon -m http.server [ポート番号]`
 
+## 複数文字のreplace
+```
+table = str.maketrans({
+    '、': ',',
+    '。': '.',
+    '・': '',
+})
+result = text.translate(table)
+```
+* `maketrans` は `str.maketrans('abcd', 'ABCD')` とも書ける(第三引数で削除)
 
 ## dataset.freeze
 * dbのデータをcsvやjsonで出力するメソッド
 * datafreeze という独立したモジュールになった(201709くらい？)
+
+## ディクショナリの初期化:
+* `d = {"a:"b", "c":"d"}` は
+* `d = dict(a="b", c="d")` と書ける
+
+## '''hogehoge''' の改行を改行しない
+* 
+```
+'''hogehoge\
+piyopiyo'''
+```
+で`'hogehogepiyopiyo'`と同じ扱い
