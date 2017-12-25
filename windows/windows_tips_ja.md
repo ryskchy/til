@@ -24,3 +24,7 @@
 ## VPN接続をコマンド上で管理する
 * powershellに `Add-VPNConnection`, `Set-VPNConnection`がある
 * ユーザ名、パスワードの変更はできない
+
+## シンボリックリンク
+* `mklink <destination> <origin>`
+* ディレクトリなら-Dをつける
