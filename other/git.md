@@ -18,3 +18,7 @@
 * `git remote show origin` でリモートとの対応関係が表示される
     * 動悸されているものはtracked, リモートで消えているものはstale
 * `git remote purune origin` で一気に消せる
+
+## リモートブランチをローカルにチェックアウト
+* `git checkout -b <localbranchname> origin/remotebranchname`
+* 勝手にsetupstreamされる
