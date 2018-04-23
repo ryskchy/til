@@ -38,6 +38,7 @@ child.Owner = this //ユーザーコントロールから呼ぶ場合はWindow.G
 child.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 ```
 で相対位置が親ウインドウの真ん中に表示される
+
 * UserControlにすれば子要素にできる
     * IsVisibleChangedにイベントハンドラを足して閉じたときの処理を書く
 * Windowを継承しても、幾つかのメンバを変更すれば子要素にできるようだが未検証 (20171026)
