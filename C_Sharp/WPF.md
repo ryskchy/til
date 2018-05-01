@@ -44,6 +44,7 @@ child.WindowStartupLocation = WindowStartupLocation.CenterOwner;
 * Windowを継承しても、幾つかのメンバを変更すれば子要素にできるようだが未検証 (20171026)
 
 ## [XAML]MarginとPadding
+
 * marginはコントロールの外側、他コントロールとの余白
 * paddingはコントロールの内側、コンテンツとの余白
 * cssとだいたい同じ
