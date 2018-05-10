@@ -13,7 +13,7 @@
 
 ## ショートカット
 * Win + S
-    * Cortana起動（検索窓起動）。MacのSplotlight感覚で意外と使える
+  * Cortana起動（検索窓起動）。MacのSplotlight感覚で意外と使える
 
 ## 登録されている拡張子は表示しないの無効化するコマンド
 * `reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt" /t REG_DWORD /d "0" /f`

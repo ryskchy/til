@@ -3,4 +3,4 @@
 
 ## リファクタリング
 * まずはDuplicationを解消ことを優先する
-    * 修正もduplicateすることになる
+  * 修正もduplicateすることになる
