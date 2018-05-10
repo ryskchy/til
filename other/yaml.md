@@ -1,7 +1,7 @@
 ## リスト
 ```
 hogehoge:
-    - aaa
-    - bbb
+  - aaa
+  - bbb
 
 ```

@@ -9,7 +9,7 @@
 
 ## ディクショナリの結合
 * `dict1.update(dict2)` ディクショナリを結合できる
-    * キーが同じならおそらく後者になる
+  * キーが同じならおそらく後者になる
 * `dict1.update(key=value)` でも可
 
 ## 数字フォーマット
@@ -19,7 +19,7 @@
 ## setの扱いについて
 * `a.intersection(b)`でも`set.intersection(a,b)`いける
 * `set.union(a,b,c,d,...)`ができる
-    * `set.union(*[1,2,3,4])`もok
+  * `set.union(*[1,2,3,4])`もok
 * `set.isdisjoint`がintersectionが無いかどうか
 * `a.difference(b)`は $$\forall x \in a and x \not\in b$$
 
@@ -46,13 +46,13 @@ shutil.rmtree("hoge")
 ## ファイルを再帰的に探索
 ```
 def find_all_files(directory):
-    for root, dirs, files in os.walk(directory):
-        yield root
-        for file in files:
-            yield os.path.join(root, file)
+  for root, dirs, files in os.walk(directory):
+    yield root
+    for file in files:
+      yield os.path.join(root, file)
 
 for file in find_all_files('/tmp/test'):
-    print file
+  print file
 ```
 
 ## SimpleHTTPServer on python3
@@ -61,9 +61,9 @@ for file in find_all_files('/tmp/test'):
 ## 複数文字のreplace
 ```
 table = str.maketrans({
-    '、': ',',
-    '。': '.',
-    '・': '',
+  '、': ',',
+  '。': '.',
+  '・': '',
 })
 result = text.translate(table)
 ```

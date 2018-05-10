@@ -16,4 +16,4 @@ series.to_frame().apply(lambda x:x.name, 1)
 
 * http://sinhrks.hatenablog.com/entry/2014/11/09/183603
 * `pd.date_range("2017-10-01", freq="M", period=6)`で月末のリストになる
-    * `freq="M"` ならなんでもいい
+  * `freq="M"` ならなんでもいい
