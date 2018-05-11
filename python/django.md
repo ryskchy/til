@@ -2,7 +2,7 @@
 
 ## アプリケーションを作るときのお約束
 
-```
+```sh
 django-admin startproject <project_name>
 cd <project_name>
 python managee.py startapp <app_name>
