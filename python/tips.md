@@ -1,22 +1,27 @@
 ## import
+
 * 上位フォルダ同じ名前のモジュールがあるとそっちが優先的に読み込まれることがある
 * `from . import hoge` で回避可能
 * 実態未解明
 
 ## ディレクトリ作成
+
 * `os.mkdir` は途中のパスが存在するとエラーになるが、`os.makedirs`は再帰的にディレクトリを作る。
 * また、 `exist_ok=True` とすると、対象ディレクトリが存在してもエラーにならない
 
 ## ディクショナリの結合
+
 * `dict1.update(dict2)` ディクショナリを結合できる
   * キーが同じならおそらく後者になる
 * `dict1.update(key=value)` でも可
 
 ## 数字フォーマット
+
 * `"{:02d}".format(1)`で`"01"`
 * 何回調べても忘れる(C#も)
 
 ## setの扱いについて
+
 * `a.intersection(b)`でも`set.intersection(a,b)`いける
 * `set.union(a,b,c,d,...)`ができる
   * `set.union(*[1,2,3,4])`もok
@@ -33,11 +38,14 @@
 |`s ^ t`|`s.union(t)`|どちらか一方にだけあるもの|
 
 ## ディレクトリのコピー、削除
-* ディレクトリの再帰的コピー 
+
+* ディレクトリの再帰的コピー
+
 ```
 import distutils.dir_util
 distutils.dir_util.copy_tree("source_path", "dit_path")
 ```
+
 * ディレクトリの削除（中身がある）
 ```
 shutil.rmtree("hoge")
@@ -56,6 +64,7 @@ for file in find_all_files('/tmp/test'):
 ```
 
 ## SimpleHTTPServer on python3
+
 * `pyhon -m http.server [ポート番号]`
 
 ## 複数文字のreplace
@@ -74,10 +83,12 @@ result = text.translate(table)
 * datafreeze という独立したモジュールになった(201709くらい？)
 
 ## ディクショナリの初期化:
+
 * `d = {"a:"b", "c":"d"}` は
 * `d = dict(a="b", c="d")` と書ける
 
 ## '''hogehoge''' の改行を改行しない
+
 * 
 ```
 '''hogehoge\
