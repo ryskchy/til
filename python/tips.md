@@ -1,3 +1,5 @@
+# Python tips
+
 ## import
 
 * 上位フォルダ同じ名前のモジュールがあるとそっちが優先的に読み込まれることがある
@@ -41,18 +43,20 @@
 
 * ディレクトリの再帰的コピー
 
-```
+```python
 import distutils.dir_util
 distutils.dir_util.copy_tree("source_path", "dit_path")
 ```
 
 * ディレクトリの削除（中身がある）
-```
+
+```python
 shutil.rmtree("hoge")
 ```
 
 ## ファイルを再帰的に探索
-```
+
+```python
 def find_all_files(directory):
   for root, dirs, files in os.walk(directory):
     yield root
@@ -68,7 +72,8 @@ for file in find_all_files('/tmp/test'):
 * `pyhon -m http.server [ポート番号]`
 
 ## 複数文字のreplace
-```
+
+```python
 table = str.maketrans({
   '、': ',',
   '。': '.',
@@ -76,9 +81,11 @@ table = str.maketrans({
 })
 result = text.translate(table)
 ```
+
 * `maketrans` は `str.maketrans('abcd', 'ABCD')` とも書ける(第三引数で削除)
 
 ## dataset.freeze
+
 * dbのデータをcsvやjsonで出力するメソッド
 * datafreeze という独立したモジュールになった(201709くらい？)
 
@@ -89,9 +96,9 @@ result = text.translate(table)
 
 ## '''hogehoge''' の改行を改行しない
 
-* 
-```
+```python
 '''hogehoge\
 piyopiyo'''
 ```
+
 で`'hogehogepiyopiyo'`と同じ扱い
