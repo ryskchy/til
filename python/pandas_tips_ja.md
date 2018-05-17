@@ -1,9 +1,11 @@
+# Pandas
+
 ## Series.applyのインデックス
 
 * おそらく`Series.apply`の関数内でインデクスを取得する方法はない
 * [`to_frame()`](#SeriesからDataFrameへの変換)してから`.name`でとる
 
-```
+```python
 series.to_frame().apply(lambda x:x.name, 1)
 ```
 
@@ -18,6 +20,6 @@ series.to_frame().apply(lambda x:x.name, 1)
 
 ## `pd.date_range`
 
-* http://sinhrks.hatenablog.com/entry/2014/11/09/183603
+* <http://sinhrks.hatenablog.com/entry/2014/11/09/183603>
 * `pd.date_range("2017-10-01", freq="M", period=6)`で月末のリストになる
   * `freq="M"` ならなんでもいい
