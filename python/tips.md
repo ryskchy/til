@@ -89,7 +89,7 @@ result = text.translate(table)
 * dbのデータをcsvやjsonで出力するメソッド
 * datafreeze という独立したモジュールになった(201709くらい？)
 
-## ディクショナリの初期化:
+## ディクショナリの初期化
 
 * `d = {"a:"b", "c":"d"}` は
 * `d = dict(a="b", c="d")` と書ける

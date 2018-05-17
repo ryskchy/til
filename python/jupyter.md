@@ -1,4 +1,7 @@
+# jupyter
+
 ## リモートアクセス可能なように動かす(最新版)
+
 * `jupyter notebook --generate-config`するだけでとりあえずアクセスは出来るようになる(要ファイアウォール設定)
   * ~/.jupyter/jupyter_notebook_config.pyが作成される
 * パスワードはランダムに設定されて、サーバーコンソールに暗号化されたトークンがログとして流れる
@@ -9,10 +12,25 @@
 ## condaで作ったカーネルを切り替える
 
 * 環境一覧を取得
-`conda info -e`
+
+```bash
+conda info -e
+```
+
 * 対象環境をactivate
-`activate py2` (py2はAnaconda2.7をインストールした環境)
-* `ipython kernel install --user --name=py2 --display-name=Anaconda2.7` を実行
+
+```bash
+activate <envname> # (envnameはcondaで作った環境名)
+```
+
+* 次を実行
+
+```bash
+ipython kernel install --user --name=<envname> --display-name=<DisplayName>
+```
+
 * 追加後
 
 ![キャプチャ](キャプチャ.png)
+
+画像はDisplayNameがAnaconda2.7のケース
