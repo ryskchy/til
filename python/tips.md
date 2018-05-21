@@ -102,3 +102,5 @@ piyopiyo'''
 ```
 
 で`'hogehogepiyopiyo'`と同じ扱い
+
+## dictionaryを
