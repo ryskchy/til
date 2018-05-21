@@ -1,4 +1,5 @@
 ## リモートアクセス可能なように動かす(最新版)
+
 * `jupyter notebook --generate-config`するだけでとりあえずアクセスは出来るようになる(要ファイアウォール設定)
   * ~/.jupyter/jupyter_notebook_config.pyが作成される
 * パスワードはランダムに設定されて、サーバーコンソールに暗号化されたトークンがログとして流れる
@@ -8,11 +9,17 @@
 
 ## condaで作ったカーネルを切り替える
 
-* 環境一覧を取得
-`conda info -e`
-* 対象環境をactivate
-`activate py2` (py2はAnaconda2.7をインストールした環境)
+* 環境一覧を取得 `conda info -e`
+* 対象環境をactivate `activate py2` (py2はAnaconda2.7をインストールした環境)
 * `ipython kernel install --user --name=py2 --display-name=Anaconda2.7` を実行
 * 追加後
 
 ![キャプチャ](キャプチャ.png)
+
+## Magic Functionの作り方
+
+* `IPython.core.magic` から `register_cell_magic, register_line_cell_magic, register_line_magic`あたりをインポートして関数をデコレートするか、
+* `IPython.core.magic` から `magics_class` をインポートしてクラスをデコレートし、 `cell_magic, line_cell_magic, line_magic`あたりをインポートてメソッドをデコレートする
+* クラスをデコレートするとMagic Functionの実行をまたいで状態を保持できる
+* `IPython.core.magic_arguments` の`argument, magic_arguments, parse_argstring` あたりで引数をパースできる（詳細未確認）
+* コードを実行する場合は`IPython.core.interactiveshell.InteractiveShell` オブジェクトを受け取り、`run_cell, safe_execfile` 等する
