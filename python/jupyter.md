@@ -42,3 +42,10 @@ ipython kernel install --user --name=<envname> --display-name=<DisplayName>
 * クラスをデコレートするとMagic Functionの実行をまたいで状態を保持できる
 * `IPython.core.magic_arguments` の`argument, magic_arguments, parse_argstring` あたりで引数をパースできる（詳細未確認）
 * コードを実行する場合は`IPython.core.interactiveshell.InteractiveShell` オブジェクトを受け取り、`run_cell, safe_execfile` 等する
+
+## 標準入出力
+
+* `sys.stdin.readline` は常にから文字を返す
+  * 書き換えても`input`はキャプチャできない
+* `sys.stdout`は書き換えればキャプチャできる
+  * `sys.__stdout__` はコンソール側の出力なので、戻すためには別変数に保持する必要がある
