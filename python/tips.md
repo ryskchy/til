@@ -102,3 +102,21 @@ piyopiyo'''
 ```
 
 で`'hogehogepiyopiyo'`と同じ扱い
+
+## unittest.mock
+
+* `mock.patch` で適用範囲を限定して名前空間を置き換えられる
+* `from hoge import piyo` と `import hoge` の `hoge.piyo` は別々に置き換えられる
+* 参考: <http://blog.amedama.jp/entry/2016/12/06/220000>
+
+## freezegun
+
+* `datetime.now` の時刻を置き換えられる
+
+```python
+@freezegun.freeze_time('2015-10-21')
+def main():
+    print(datetime.now())
+```
+
+* 参考: <http://note.crohaco.net/2015/python-mock/>
