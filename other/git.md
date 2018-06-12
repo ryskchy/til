@@ -29,3 +29,7 @@
 
 * `git checkout -b <localbranchname> origin/remotebranchname`
 * 勝手にsetupstreamされる
+
+## 部分的にpush
+
+* `git subtree push --prefix=<prefix> <remote> <branch>`
