@@ -120,3 +120,9 @@ def main():
 ```
 
 * 参考: <http://note.crohaco.net/2015/python-mock/>
+
+## logging
+
+* `FATAL` は `CRITICAL`、`WARN`は`WARNING`に置き換える
+* `logging.handlers.HTTPHandler` はヘッダに`"Content-type": application/x-www-form-urlencoded"` をセットする
+  * slackのincomming webhook等ではエラーになる?
