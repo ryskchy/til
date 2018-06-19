@@ -1,3 +1,5 @@
+# Misc
+
 ## ボイラープレート
 
 * 定型文、おまじない
@@ -19,3 +21,7 @@ Host github github.com
 ```
 
 と書けばsshの鍵を指定できる
+
+## Slack bot
+
+* 書き込むだけのslack bot はincomming webhookで十分

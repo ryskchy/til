@@ -85,3 +85,8 @@ echo "not Release"
 ## library
 
 * Npgsql は .net 4.0をサポートしていない
+
+## XMLSerializer
+
+* `[XmlElemnt("hoge")]` アトリビュートをコレクションにつけるとコレクションの中身がフラットにぶら下がる
+* `[XmlArray("array")]`, `[XmlArrayItem("item")]` を使う
