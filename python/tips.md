@@ -126,3 +126,39 @@ def main():
 * `FATAL` は `CRITICAL`、`WARN`は`WARNING`に置き換える
 * `logging.handlers.HTTPHandler` はヘッダに`"Content-type": application/x-www-form-urlencoded"` をセットする
   * slackのincomming webhook等ではエラーになる?
+
+## クロージャの変数参照
+
+```python
+def add(x,y):
+    return x + y
+
+functions = [lambda z: add(z, y) for y in range(10)]
+```
+
+とすると、`functions` の中身のラムダ式はグローバル変数`y`と引数`z`の足し算を返す関数になるだけ。
+
+無理やり作るなら
+
+```python
+functions = [(lambda yy: (lambda z: add(z, yy)))(y) for y in range(10)]
+```
+
+とすれば、外側のラムダ式を実行する際にyの値が参照されるので、yの値を固定できる。
+
+ちゃんとするならオブジェクトを作ったほうがいい
+
+```python
+def add(x,y):
+    return x + y
+
+class adder(object):
+
+    def __init__(self, y):
+        self.y = y
+  
+    def add(self, x):
+        return add(x, self.y)
+
+functions = [adder(y).add for y in range(10)]
+```
