@@ -162,3 +162,8 @@ class adder(object):
 
 functions = [adder(y).add for y in range(10)]
 ```
+
+## os.walk
+
+* root, directories, filesを返すジェネレータ
+* 指定したフォルダから階層順、名前順に一覧を返す
