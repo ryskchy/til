@@ -20,3 +20,8 @@
 var a = {};
 a[[1, 1]] = 10;
 '''
+
+## nodist
+
+* windowsで複数バージョン使用はnodistを使う
+  * powershellでしか動かない？
