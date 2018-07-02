@@ -11,7 +11,6 @@
 
 ## condaで作ったカーネルを切り替える
 
-
 * 環境一覧を取得
 
 ```bash
@@ -38,7 +37,7 @@ ipython kernel install --user --name=<envname> --display-name=<DisplayName>
 ## Magic Functionの作り方
 
 * `IPython.core.magic` から `register_cell_magic, register_line_cell_magic, register_line_magic`あたりをインポートして関数をデコレートするか、
-* `IPython.core.magic` から `magics_class` をインポートしてクラスをデコレートし、 `cell_magic, line_cell_magic, line_magic`あたりをインポートてメソッドをデコレートする
+* `IPython.core.magic` から `magics_class` をインポートしてクラスをデコレートし、 `cell_magic, line_cell_magic, line_magic`あたりをインポートしてメソッドをデコレートする
 * クラスをデコレートするとMagic Functionの実行をまたいで状態を保持できる
 * `IPython.core.magic_arguments` の`argument, magic_arguments, parse_argstring` あたりで引数をパースできる（詳細未確認）
 * コードを実行する場合は`IPython.core.interactiveshell.InteractiveShell` オブジェクトを受け取り、`run_cell, safe_execfile` 等する
