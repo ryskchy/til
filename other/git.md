@@ -33,3 +33,22 @@
 ## 部分的にpush
 
 * `git subtree push --prefix=<prefix> <remote> <branch>`
+
+## コミットの取り消し
+
+* `git reset --soft HEAD^`
+* `--soft` をつけるとワーキングディレクトリはそのまま、`--hard` はワーキングディレクトリも戻す
+* 何もつけないとindexも戻す（addも戻す）
+
+## addの取り消し
+
+* `git reset HEAD <filename>`
+
+## `HEAD`, `~` `^`,
+
+* `HEAD`: 今のブランチの先頭コミット
+* `~`: n世代前のコミットを指定
+  * `~2`: 2世代前のコミット
+* `^`: 親コミット
+  * `^^`: 1番目の親の1番目の親
+  * `^2`: 2番目の親

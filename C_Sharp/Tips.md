@@ -90,3 +90,8 @@ echo "not Release"
 
 * `[XmlElemnt("hoge")]` アトリビュートをコレクションにつけるとコレクションの中身がフラットにぶら下がる
 * `[XmlArray("array")]`, `[XmlArrayItem("item")]` を使う
+
+## public const
+
+* 参照側でもコンパイル時に値が固定されるので、値を変えるときは参照側もコンパイルし直す必要がある
+* `Math.PI`の様な不変の値以外はreadonlyのほうがベター
