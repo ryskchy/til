@@ -58,13 +58,13 @@ shutil.rmtree("hoge")
 
 ```python
 def find_all_files(directory):
-  for root, dirs, files in os.walk(directory):
-    yield root
-    for file in files:
-      yield os.path.join(root, file)
+    for root, dirs, files in os.walk(directory):
+        yield root
+        for file in files:
+            yield os.path.join(root, file)
 
 for file in find_all_files('/tmp/test'):
-  print file
+  print(file)
 ```
 
 ## SimpleHTTPServer on python3
