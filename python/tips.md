@@ -167,3 +167,7 @@ functions = [adder(y).add for y in range(10)]
 
 * root, directories, filesを返すジェネレータ
 * 指定したフォルダから階層順、名前順に一覧を返す
+
+## open
+
+* いつの間にか`codecs.open` しなくても`open(fname,encoding="utf-8")` とできるようになってた（いつから？）
