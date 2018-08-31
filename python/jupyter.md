@@ -35,6 +35,8 @@ ipython kernel install --user --name=<envname> --display-name=<DisplayName>
 ![キャプチャ](キャプチャ.png)
 画像はDisplayNameがAnaconda2.7のケース
 
+* Pipenv等で作った環境でも同様にシェルが使える状態にすれば可能
+
 ## Magic Functionの作り方
 
 * `IPython.core.magic` から `register_cell_magic, register_line_cell_magic, register_line_magic`あたりをインポートして関数をデコレートするか、
