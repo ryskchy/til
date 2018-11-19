@@ -2,16 +2,16 @@
 
 ## ボイラープレート
 
-* 定型文、おまじない
+- 定型文、おまじない
 
 ## リファクタリング
 
-* まずはDuplicationを解消ことを優先する
-  * 修正もduplicateすることになる
+- まずは Duplication を解消ことを優先する
+  - 修正も duplicate することになる
 
-## SSH公開鍵
+## SSH 公開鍵
 
-* `~/.ssh/config` に
+- `~/.ssh/config` に
 
 ```text
 Host github github.com
@@ -20,8 +20,8 @@ Host github github.com
   User git
 ```
 
-と書けばsshの鍵を指定できる
+と書けば ssh の鍵を指定できる
 
 ## Slack bot
 
-* 書き込むだけのslack bot はincomming webhookで十分
+- 書き込むだけの slack bot は incomming webhook で十分
