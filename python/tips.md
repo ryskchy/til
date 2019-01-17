@@ -176,3 +176,10 @@ functions = [adder(y).add for y in range(10)]
 
 - `pip install -U git+https://github.com/Kojoley/atari-py.git`
 - <http://daruma3940.hatenablog.com/entry/2017/08/13/030344>
+
+## Macでimportした時にCompilation failedになる時
+
+- `import theano`などで起きる
+  - `stdio.h`がないと言われる
+- xcodeの仕様変更で`/local/include`に何も入っていないのが原因
+- `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg` をインストールすればok
