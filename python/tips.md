@@ -183,3 +183,7 @@ functions = [adder(y).add for y in range(10)]
   - `stdio.h`がないと言われる
 - xcodeの仕様変更で`/local/include`に何も入っていないのが原因
 - `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg` をインストールすればok
+
+## Matplotlib で色を順番に選ぶ
+
+- `cmap =plt.rcParams['axes.prop_cycle']`
