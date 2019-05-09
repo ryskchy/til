@@ -1,8 +1,10 @@
 # Python tips
 
+標準ライブラリ、ビルトイン関数などの tips
+
 ## import
 
-- 上位フォルダ同じ名前のモジュールがあるとそっちが優先的に読み込まれることがある
+- 上位フォルダに同じ名前のモジュールがあるとそっちが優先的に読み込まれることがある
 - `from . import hoge` で回避可能
 - 実態未解明
 
@@ -10,11 +12,12 @@
 
 - `os.mkdir` は途中のパスが存在するとエラーになるが、`os.makedirs`は再帰的にディレクトリを作る。
 - また、 `exist_ok=True` とすると、対象ディレクトリが存在してもエラーにならない
+- `pathlib`のディレクトリパスオブジェクトの`Path.mkdir`は引数で`exist_ok`をとることができる
 
 ## ディクショナリの結合
 
 - `dict1.update(dict2)` ディクショナリを結合できる
-  - キーが同じならおそらく後者になる
+  - キーが同じならおそらく上書きになる
 - `dict1.update(key=value)` でも可
 
 ## 数字フォーマット
@@ -107,18 +110,6 @@ piyopiyo'''
 
 - `mock.patch` で適用範囲を限定して名前空間を置き換えられる
 - `from hoge import piyo` と `import hoge` の `hoge.piyo` は別々に置き換えられる
-- 参考: <http://blog.amedama.jp/entry/2016/12/06/220000>
-
-## freezegun
-
-- `datetime.now` の時刻を置き換えられる
-
-```python
-@freezegun.freeze_time('2015-10-21')
-def main():
-    print(datetime.now())
-```
-
 - 参考: <http://note.crohaco.net/2015/python-mock/>
 
 ## logging
@@ -172,18 +163,13 @@ functions = [adder(y).add for y in range(10)]
 
 - いつの間にか`codecs.open` しなくても`open(fname,encoding="utf-8")` とできるようになってた（いつから？）
 
-## Windows で OpenAI Gym
-
-- `pip install -U git+https://github.com/Kojoley/atari-py.git`
-- <http://daruma3940.hatenablog.com/entry/2017/08/13/030344>
-
-## Macでimportした時にCompilation failedになる時
+## Mac で import した時に Compilation failed になる時
 
 - `import theano`などで起きる
   - `stdio.h`がないと言われる
-- xcodeの仕様変更で`/local/include`に何も入っていないのが原因
-- `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg` をインストールすればok
+- xcode の仕様変更で`/local/include`に何も入っていないのが原因
+- `/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg` をインストールすれば ok
 
-## Matplotlib で色を順番に選ぶ
+## unicode コードポイントと文字の変換
 
-- `cmap =plt.rcParams['axes.prop_cycle']`
+- 組み込み関数`chr`でコードポイント → 文字, `ord`で文字 → コードポイント
