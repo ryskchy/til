@@ -9,7 +9,7 @@
 - まずは Duplication を解消ことを優先する
   - 修正も duplicate することになる
 
-## SSH 公開鍵
+## SSH 鍵
 
 - `~/.ssh/config` に
 
@@ -25,3 +25,7 @@ Host github github.com
 ## Slack bot
 
 - 書き込むだけの slack bot は incomming webhook で十分
+
+## Tex
+
+- ボールドイタリックは`\usepackage{bm}`すれば`\bm{a}`でいい
