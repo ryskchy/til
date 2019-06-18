@@ -173,3 +173,7 @@ functions = [adder(y).add for y in range(10)]
 ## unicode コードポイントと文字の変換
 
 - 組み込み関数`chr`でコードポイント → 文字, `ord`で文字 → コードポイント
+
+## pathlib
+
+- `PurePath.stem`で name without suffix

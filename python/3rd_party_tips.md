@@ -7,7 +7,7 @@
 - `contains`,`crosses`, `overwraps`,`intersects`,`touches`があるので使い分けに注意
 - `contains`:
   - `other`の点が全て内部にある
-- `cross`:
+- `crosses`:
   - interor 同士が重なるが、`contains`でない
 - `intersect`:
   - お互いの外周含めて重なりがある
