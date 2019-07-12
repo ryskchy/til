@@ -21,7 +21,7 @@ conda info -e
 - 対象環境を activate
 
 ```bash
-activate <envname> # (envnameはcondaで作った環境名)
+conda activate <envname> # (envnameはcondaで作った環境名)
 ```
 
 - 次を実行
