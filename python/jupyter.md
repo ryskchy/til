@@ -1,6 +1,6 @@
 # jupyter
 
-## リモートアクセス可能なように動かす
+## リモートアクセス可能なように動かす（201906時点）
 
 - `jupyter notebook --generate-config`とし、コンフィグファイルの `c.NotebookApp.ip`を修正すればとりあえずアクセスは出来るようになる(要ファイアウォール設定)
   - ~/.jupyter/jupyter_notebook_config.py が作成される
